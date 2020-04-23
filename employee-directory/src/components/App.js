@@ -8,18 +8,10 @@ import reactDOM from 'react-dom';
 
 class App extends Component {
   // Setting this.state.friends to the employees json array
-  constructor(){
-    super();
+  state = {
+    employees
+  };
 
-    this.state={
-      search:null,
-      result: employees
-    };
-  }
-  searchSpace=(event)=>{
-    let keyword = event.target.value;
-    this.setState({search:keyword})
-  }
   // componentDidMount() {
   //   this.searchEmployees("");
   // }
@@ -33,18 +25,11 @@ class App extends Component {
       <Wrapper>
         <Title>Employee List
         <div>
-      <input type="text" placeholder="search for employees" onChange={(e)=>this.searchSpace(e)} />
+      <input type="text" placeholder="Enter item to be searched" onChange={(e)=>this.searchSpace(e)} />
+      {this.state}
       </div>
         </Title>
-        {this.state.result.filter((data)=>{
-          if(this.state.search == null)
-            return data
-          else if(data.name.first.toLowerCase().includes(this.state.search.toLowerCase()) || data.location.country.toLowerCase().includes(this.state.search.toLowerCase()) || data.name.last.toLowerCase().includes(this.state.search.toLowerCase())){
-          return data
-      }
-    })
-        
-        .map(employee => (
+        {this.state.employees.map(employee => (
           <EmployeeCard 
             name={employee.name.first+" "+employee.name.last}
             image={employee.picture.large}
