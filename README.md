@@ -1,5 +1,22 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Employee Directory:
+
+An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+
+Functionality:
+
+This app displays employee data from a json file, featuring content generated from the random user API and supplemented with some volunteer information from Linkedin. When the page loads a search bar under the title can be used to filter employees by first name, last name, or location as shown on the employee information. Below that are two buttons, which allow the user to sort the employee list by the "years of service" field, either in ascending or descending order.
+
+
+Utilized Technologies:
+
+Random User API - https://randomuser.me/
+React
+Bootstrap
+React Components
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,3 +83,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
